@@ -1,0 +1,10 @@
+.gitignore
+node_modules
+.next
+coverage
+.eslintcache
+*.log
+.env.local
+.env.*.local
+.DS_Store
+.vercel
