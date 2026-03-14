@@ -1,7 +1,4 @@
 {
-  "monorepos": [
-    {
-      "path": "superadmin"
-    }
-  ]
+  "buildCommand": "cd superadmin && npm run build",
+  "installCommand": "cd superadmin && npm install"
 }
