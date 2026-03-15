@@ -2,11 +2,11 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm ci",
-  "env": [
-    "MONGODB_URI",
-    "JWT_SECRET",
-    "NEXT_PUBLIC_API_URL"
-  ],
+  "env": {
+    "MONGODB_URI": "@MONGODB_URI",
+    "JWT_SECRET": "@JWT_SECRET",
+    "NEXT_PUBLIC_API_URL": "@NEXT_PUBLIC_API_URL"
+  },
   "functions": {
     "app/api/**/*.ts": {
       "maxDuration": 30
