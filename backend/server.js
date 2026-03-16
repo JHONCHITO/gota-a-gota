@@ -118,7 +118,7 @@ app.post('/admin/seed-superadmin', async (_req, res, next) => {
     }
 
     const email = 'superadmin@gmail.com'
-    const plainPassword = 'admin123' // cámbiala luego
+    const plainPassword = 'Rick0066' // cámbiala luego
 
     const hashedPassword = await bcrypt.hash(plainPassword, 12)
 
