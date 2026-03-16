@@ -32,7 +32,7 @@ export default function Login() {
   const login = async () => {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/login`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/login
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
