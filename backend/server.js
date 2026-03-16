@@ -7,6 +7,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 import Admin from './models/Admin.js' // modelo de super admin
 
 // ─────────────────────────────────────────
@@ -169,6 +170,7 @@ app.post('/admin/login', async (req, res, next) => {
       email: admin.email,
       nombre: admin.nombre,
       role: admin.role,
+      token: jwt.sign({ id: admin._id, email: admin.email }, process.env.JWT_SECRET || 'secret_key_development', { expiresIn: '7d' }),
     })
   } catch (err) {
     next(err)
